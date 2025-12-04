@@ -6,30 +6,6 @@ settings:
 
 catalogs:
   default:
-    '@tailwindcss/vite':
-      specifier: 4.1.17
-      version: 4.1.17
-    '@tonconnect/ui-react':
-      specifier: 2.3.1
-      version: 2.3.1
-    '@types/react':
-      specifier: 19.1.9
-      version: 19.1.9
-    '@types/react-dom':
-      specifier: 19.1.7
-      version: 19.1.7
-    '@vitejs/plugin-react':
-      specifier: 5.0.4
-      version: 5.0.4
-    react:
-      specifier: 19.1.2
-      version: 19.1.2
-    react-dom:
-      specifier: 19.1.2
-      version: 19.1.2
-    tailwindcss:
-      specifier: 4.1.17
-      version: 4.1.17
     vite:
       specifier: 7.2.2
       version: 7.2.2
@@ -51,32 +27,32 @@ importers:
   examples/react:
     dependencies:
       '@ston-fi/omniston-widget-loader':
-        specifier: 0.1.1
-        version: 0.1.1
+        specifier: 0.1.2
+        version: 0.1.2
       '@tonconnect/ui-react':
-        specifier: 'catalog:'
+        specifier: 2.3.1
         version: 2.3.1(react-dom@19.1.2(react@19.1.2))(react@19.1.2)
       react:
-        specifier: 'catalog:'
+        specifier: 19.1.2
         version: 19.1.2
       react-dom:
-        specifier: 'catalog:'
+        specifier: 19.1.2
         version: 19.1.2(react@19.1.2)
     devDependencies:
       '@tailwindcss/vite':
-        specifier: 'catalog:'
+        specifier: 4.1.17
         version: 4.1.17(vite@7.2.2(jiti@2.6.1)(lightningcss@1.30.2))
       '@types/react':
-        specifier: 'catalog:'
+        specifier: 19.1.9
         version: 19.1.9
       '@types/react-dom':
-        specifier: 'catalog:'
+        specifier: 19.1.7
         version: 19.1.7(@types/react@19.1.9)
       '@vitejs/plugin-react':
-        specifier: 'catalog:'
+        specifier: 5.0.4
         version: 5.0.4(vite@7.2.2(jiti@2.6.1)(lightningcss@1.30.2))
       tailwindcss:
-        specifier: 'catalog:'
+        specifier: 4.1.17
         version: 4.1.17
       vite:
         specifier: 'catalog:'
@@ -511,8 +487,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@ston-fi/omniston-widget-loader@0.1.1':
-    resolution: {integrity: sha512-57gclSrE5dZ3F+S5Bfpra7AH2hlwoUdQ6RgJXIXhCAOzTfHQodAi34PXLxbZQWoPv9meykIwjw4yV7H8xemf/w==}
+  '@ston-fi/omniston-widget-loader@0.1.2':
+    resolution: {integrity: sha512-Brs8stQC6LbFabTsHgmkjGLYeC37j07vMvR99olgaBoQMw2X4a+BKeK2bQAlc5hqA70aOHSQevHao9kwjFfwPQ==}
 
   '@tailwindcss/node@4.1.17':
     resolution: {integrity: sha512-csIkHIgLb3JisEFQ0vxr2Y57GUNYh447C8xzwj89U/8fdW8LhProdxvnVH6U8M2Y73QKiTIH+LWbK3V2BBZsAg==}
@@ -1338,7 +1314,7 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.53.3':
     optional: true
 
-  '@ston-fi/omniston-widget-loader@0.1.1': {}
+  '@ston-fi/omniston-widget-loader@0.1.2': {}
 
   '@tailwindcss/node@4.1.17':
     dependencies:

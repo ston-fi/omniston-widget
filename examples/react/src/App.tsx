@@ -33,7 +33,7 @@ function App() {
     return () => {
       widgetRef.current?.unmount();
     };
-  }, [tonconnect, widgetElRef]);
+  }, [tonconnect]);
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-start gap-8 p-8">
