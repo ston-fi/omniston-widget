@@ -1,0 +1,15 @@
+{
+  "name": "@ston-fi/omniston-widget-example-vanilla",
+  "version": "0.1.0",
+  "description": "",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "catalog:"
+  }
+}
