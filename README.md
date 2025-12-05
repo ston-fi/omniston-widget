@@ -2,19 +2,19 @@
   <img alt="Ston.fi logo" src="https://static.ston.fi/logo/full-logo.svg" height="69" />
 </div>
 
+### Documentation
+
+For complete documentation, including detailed configuration options, API reference, and integration guides, please visit:
+
+**[https://docs.ston.fi/developer-section/widget](https://docs.ston.fi/developer-section/widget)**
+
 ### Distribution Model
 
-**This widget code is not distributed as an npm package.**
+**This widget code is not distributed as an npm package.** This is an intentional design decision to prevent integrators from installing a fixed version that becomes outdated over time.
 
-This is an intentional design decision to prevent integrators from installing a fixed version that becomes outdated over time.
-
-**Why?**
-
-By serving the widget exclusively via CDN, we ensure that all integrators always receive the latest version with bug fixes, security patches, and new features. Backward compatibility is guaranteed through the version path (`/v0/`, `/v1/`, etc.), so your integration will continue to work while automatically benefiting from updates within the same major version.
+**Why?** By serving the widget exclusively via CDN, we ensure that all integrators always receive the latest version with bug fixes, security patches, and new features. Backward compatibility is guaranteed through the version path (`/v0/`, `/v1/`, etc.), so your integration will continue to work while automatically benefiting from updates within the same major version.
 
 ---
-
-### [@ston-fi/omniston-widget](https://swap.ston.fi/widget/v0/index.js)
 
 Load the widget directly via a script tag. The IIFE bundle exposes `OmnistonWidget` as a global variable on `window`.
 
@@ -24,16 +24,15 @@ Load the widget directly via a script tag. The IIFE bundle exposes `OmnistonWidg
     const widget = new window.OmnistonWidget(/** **/);
 ```
 
-### [@ston-fi/omniston-widget-loader](https://github.com/ston-fi/omniston-widget/tree/main/packages/omniston-widget-loader)
-
-[![TON](https://img.shields.io/badge/based%20on-TON-blue)](https://ton.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![npm version](https://img.shields.io/npm/v/@ston-fi/omniston-widget-loader/latest.svg)](https://www.npmjs.com/package/@ston-fi/omniston-widget-loader/v/latest)
-
+**OR**
 
 For applications that need programmatic control over when the widget loads, use this loader package with its `load()` function.
 
-```ts
+```sh
+npm i @ston-fi/omniston-widget-loader
+```
+
+```js
 import omnistonWidgetLoader from "@ston-fi/omniston-widget-loader";
 
 omnistonWidgetLoader.load().then((OmnistonWidget) => {
