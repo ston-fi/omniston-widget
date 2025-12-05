@@ -5,6 +5,11 @@
     "type": "git",
     "url": "git+https://github.com/ston-fi/omniston-widget.git"
   },
+  "contributors": [ 
+    "Pavel Rakhmanov <p.rakhmanov@ston.fi>",
+    "Psevkin Andrey <a.psevkin@ston.fi>",
+    "pxbuffer"
+  ],
   "packageManager": "pnpm@10.24.0",
   "devDependencies": {
     "@biomejs/biome": "2.3.4",
