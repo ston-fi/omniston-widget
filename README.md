@@ -1,5 +1,9 @@
 <div align="center" style="margin-bottom: 20px">
-  <img alt="Ston.fi logo" src="https://static.ston.fi/logo/full-logo.svg" height="69" />
+  <picture>
+    <source media="(prefers-color-scheme: light)" srcset="https://static.ston.fi/branbook/omniston/logo/black.svg" >
+    <source media="(prefers-color-scheme: dark)" srcset="https://static.ston.fi/branbook/omniston/logo/white.svg" >
+    <img alt="Omniston svg" height="100px" src="https://static.ston.fi/branbook/omniston/logo/black.svg" >
+  </picture>
 </div>
 
 ### Documentation
