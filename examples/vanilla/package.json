@@ -1,7 +1,6 @@
 {
   "name": "@ston-fi/omniston-widget-example-vanilla",
-  "version": "0.1.0",
-  "description": "",
+  "private": true,
   "license": "MIT",
   "type": "module",
   "scripts": {
