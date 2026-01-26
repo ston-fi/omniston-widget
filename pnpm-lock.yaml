@@ -27,8 +27,8 @@ importers:
   examples/react:
     dependencies:
       '@ston-fi/omniston-widget-loader':
-        specifier: 0.1.2
-        version: 0.1.2
+        specifier: 0.2.0
+        version: 0.2.0
       '@tonconnect/ui-react':
         specifier: 2.3.1
         version: 2.3.1(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
@@ -487,8 +487,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@ston-fi/omniston-widget-loader@0.1.2':
-    resolution: {integrity: sha512-Brs8stQC6LbFabTsHgmkjGLYeC37j07vMvR99olgaBoQMw2X4a+BKeK2bQAlc5hqA70aOHSQevHao9kwjFfwPQ==}
+  '@ston-fi/omniston-widget-loader@0.2.0':
+    resolution: {integrity: sha512-7SsSdiTAjAeoyRhfMr8Smo6B6FBF6cSbHneDL1wtMkdeYvfEaWUdX1vwqMBZgdliUCso693edcSKJC7pEPn3dQ==}
 
   '@tailwindcss/node@4.1.18':
     resolution: {integrity: sha512-DoR7U1P7iYhw16qJ49fgXUlry1t4CpXeErJHnQ44JgTSKMaZUdf17cfn5mHchfJ4KRBZRFA/Coo+MUF5+gOaCQ==}
@@ -1314,7 +1314,7 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.53.3':
     optional: true
 
-  '@ston-fi/omniston-widget-loader@0.1.2': {}
+  '@ston-fi/omniston-widget-loader@0.2.0': {}
 
   '@tailwindcss/node@4.1.18':
     dependencies:

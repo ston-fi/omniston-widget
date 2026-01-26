@@ -8,7 +8,7 @@
       type="image/x-icon"
       href="https://static.ston.fi/favicon/favicon.ico"
     />
-    <title>Widget in Vanilla app</title>
+    <title>Omniston Widget Vanilla example</title>
     <style>
       body {
         min-height: 100vh;
@@ -37,12 +37,8 @@
         border: none;
         cursor: pointer;
       }
-
-      #omniston-widget-container {
-        max-width: min(500px, calc(100vw - 2 * 2rem));
-      }
     </style>
-    <script src="https://swap.ston.fi/widget/v0/index.js"></script>
+    <script src="https://widget.ston.fi/v0/index.js"></script>
   </head>
   <body>
     <h1>Ston.fi Omniston Widget</h1>
@@ -61,13 +57,16 @@
         tonconnect: {
           type: "standalone",
           options: {
-            manifestUrl: "https://<YOUR_APP_URL>/tonconnect-manifest.json",
+            // see https://docs.ton.org/ecosystem/ton-connect/manifest
+            manifestUrl: "https://[myapp.com]/tonconnect-manifest.json",
           },
         },
         widget: {
-          defaultBidAsset: "EQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAM9c",
-          defaultAskAsset: "EQA2kCVNwVsil2EM2mB0SkXytxCqQjS4mttjDpnXmwG9T6bO",
-          customAssets: ["EQCWFe9TTbe-1oQMR0FtOprIibHEpftpqkRGFZoq8mBl6cNk"],
+          defaultBidAsset: "EQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAM9c",  // TON
+          defaultAskAsset: "EQCxE6mUtQJKFnGfaROTKOt1lZbDiiX1kCixRv7Nw2Id_sDs",  // USD₮
+          customAssets: [
+            "EQA2kCVNwVsil2EM2mB0SkXytxCqQjS4mttjDpnXmwG9T6bO",                 // STON
+          ],
         },
       });
 

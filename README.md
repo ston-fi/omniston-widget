@@ -6,11 +6,9 @@
   </picture>
 </div>
 
-### Documentation
+## Documentation
 
-For complete documentation, including detailed configuration options, API reference, and integration guides, please visit:
-
-**[https://docs.ston.fi/developer-section/widget](https://docs.ston.fi/developer-section/widget)**
+For complete documentation, including detailed configuration options, API reference, and integration guides, please visit **[https://docs.ston.fi/developer-section/widget](https://docs.ston.fi/developer-section/widget)**
 
 ### Distribution Model
 
@@ -18,14 +16,17 @@ For complete documentation, including detailed configuration options, API refere
 
 **Why?** By serving the widget exclusively via CDN, we ensure that all integrators always receive the latest version with bug fixes, security patches, and new features. Backward compatibility is guaranteed through the version path (`/v0/`, `/v1/`, etc.), so your integration will continue to work while automatically benefiting from updates within the same major version.
 
----
+## Usage
 
 Load the widget directly via a script tag. The IIFE bundle exposes `OmnistonWidget` as a global variable on `window`.
 
 ```html
-  <script src="https://swap.ston.fi/widget/v0/index.js"></script>
+  <script src="https://widget.ston.fi/v0/index.js"></script>
   <script type="module">
     const widget = new window.OmnistonWidget(/** **/);
+
+    widget.mount(document.querySelector("#omniston-widget-container"));
+  </script>
 ```
 
 **OR**
@@ -40,5 +41,8 @@ npm i @ston-fi/omniston-widget-loader
 import omnistonWidgetLoader from "@ston-fi/omniston-widget-loader";
 
 omnistonWidgetLoader.load().then((OmnistonWidget) => {
-  const widget = OmnistonWidget(/** **/);
+  const widget = new OmnistonWidget(/** **/);
+
+  widget.mount(document.querySelector("#omniston-widget-container"));
+});
 ```

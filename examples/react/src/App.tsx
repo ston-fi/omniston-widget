@@ -11,29 +11,38 @@ import { useEffect, useRef } from "react";
 function App() {
   const [tonconnect] = useTonConnectUI();
 
-  const widgetElRef = useRef<HTMLDivElement | null>(null);
+  const containerRef = useRef<HTMLDivElement | null>(null);
   const widgetRef = useRef<OmnistonWidget | null>(null);
 
   useEffect(() => {
-    omnistonWidgetLoader.load().then((OmnistonWidget) => {
-      widgetRef.current = new OmnistonWidget({
+    let isMounted = true;
+
+    omnistonWidgetLoader.load().then((OmnistonWidgetConstructor) => {
+      if (!isMounted || !containerRef.current || !tonconnect) return;
+
+      widgetRef.current = new OmnistonWidgetConstructor({
         tonconnect: {
           type: "integrated",
           instance: tonconnect,
         },
         widget: {
-          defaultBidAsset: "EQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAM9c", // TON
-          defaultAskAsset: "EQA2kCVNwVsil2EM2mB0SkXytxCqQjS4mttjDpnXmwG9T6bO", // STON
+          defaultBidAsset: "EQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAM9c",  // TON
+          defaultAskAsset: "EQCxE6mUtQJKFnGfaROTKOt1lZbDiiX1kCixRv7Nw2Id_sDs",  // USD₮
+          customAssets: [
+            "EQA2kCVNwVsil2EM2mB0SkXytxCqQjS4mttjDpnXmwG9T6bO",                 // STON
+          ],
         },
       });
 
-      widgetRef.current.mount(widgetElRef.current!);
+      widgetRef.current.mount(containerRef.current);
     });
 
     return () => {
+      isMounted = false;
       widgetRef.current?.unmount();
+      widgetRef.current = null;
     };
-  }, [tonconnect]);
+  }, []);
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-start gap-8 p-8">
@@ -42,8 +51,8 @@ function App() {
       </h1>
       <TonConnectButton className="mx-auto" />
       <div
-        ref={widgetElRef}
-        className="max-w-[min(500px,calc(100vw-2*2rem))] p-4"
+        ref={containerRef}
+        className="p-4"
       />
     </main>
   );
@@ -51,7 +60,10 @@ function App() {
 
 const Root = () => {
   return (
-    <TonConnectUIProvider manifestUrl="https://<YOUR_APP_URL>/tonconnect-manifest.json">
+    <TonConnectUIProvider 
+      // see https://docs.ton.org/ecosystem/ton-connect/manifest
+      manifestUrl="https://[myapp.com]/tonconnect-manifest.json"
+    >
       <App />
     </TonConnectUIProvider>
   );

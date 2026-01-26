@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@ston-fi/omniston-widget-loader": "0.1.2",
+    "@ston-fi/omniston-widget-loader": "0.2.0",
     "@tonconnect/ui-react": "2.3.1",
     "react": "19.2.3",
     "react-dom": "19.2.3"
