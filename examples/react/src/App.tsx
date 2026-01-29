@@ -50,19 +50,16 @@ function App() {
         Ston.fi Omniston Widget in React app with custom TonConnect
       </h1>
       <TonConnectButton className="mx-auto" />
-      <div
-        ref={containerRef}
-        className="p-4"
-      />
+      <div ref={containerRef} />
     </main>
   );
 }
 
 const Root = () => {
   return (
-    <TonConnectUIProvider 
+    <TonConnectUIProvider
       // see https://docs.ton.org/ecosystem/ton-connect/manifest
-      manifestUrl="https://[myapp.com]/tonconnect-manifest.json"
+      manifestUrl="https://<YOUR_APP_URL>/tonconnect-manifest.json"
     >
       <App />
     </TonConnectUIProvider>
