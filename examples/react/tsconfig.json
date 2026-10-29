@@ -1,10 +1,10 @@
 {
-  "extends": "../../tsconfig.json",
+  "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "types": ["vite/client"],
     "jsx": "react-jsx",
     "allowImportingTsExtensions": true
   },
-  "exclude": [".turbo", "node_modules"]
+  "exclude": [".turbo", "dist", "node_modules"]
 }

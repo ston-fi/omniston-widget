@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -51,7 +51,9 @@
     <div id="omniston-widget-container"></div>
 
     <script type="module">
-      const widgetContainer = document.querySelector("#omniston-widget-container");
+      const widgetContainer = document.querySelector(
+        "#omniston-widget-container",
+      );
 
       const widget = new window.OmnistonWidget({
         tonconnect: {
@@ -62,10 +64,10 @@
           },
         },
         widget: {
-          defaultBidAsset: "EQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAM9c",  // TON
-          defaultAskAsset: "EQCxE6mUtQJKFnGfaROTKOt1lZbDiiX1kCixRv7Nw2Id_sDs",  // USD₮
+          defaultBidAsset: "EQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAM9c", // TON
+          defaultAskAsset: "EQCxE6mUtQJKFnGfaROTKOt1lZbDiiX1kCixRv7Nw2Id_sDs", // USD₮
           customAssets: [
-            "EQA2kCVNwVsil2EM2mB0SkXytxCqQjS4mttjDpnXmwG9T6bO",                 // STON
+            "EQA2kCVNwVsil2EM2mB0SkXytxCqQjS4mttjDpnXmwG9T6bO", // STON
           ],
         },
       });

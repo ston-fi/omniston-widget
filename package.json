@@ -2,7 +2,7 @@
   "name": "root",
   "private": true,
   "license": "MIT",
-  "contributors": [ 
+  "contributors": [
     "Egor Guscha @pxbuffer",
     "Pavel Rakhmanov <p.rakhmanov@ston.fi>",
     "Psevkin Andrey <a.psevkin@ston.fi>"
@@ -11,10 +11,16 @@
     "type": "git",
     "url": "git+https://github.com/ston-fi/omniston-widget.git"
   },
-  "devDependencies": {
-    "@biomejs/biome": "2.3.12",
-    "lefthook": "2.0.15",
-    "typescript": "5.9.3"
+  "scripts": {
+    "dev:example:react": "pnpm --filter @ston-fi/omniston-widget-example-react dev",
+    "dev:example:vanilla": "pnpm --filter @ston-fi/omniston-widget-example-vanilla dev"
   },
-  "packageManager": "pnpm@10.24.0"
+  "devDependencies": {
+    "lefthook": "2.2.2",
+    "oxfmt": "0.75.0",
+    "oxlint": "1.90.0",
+    "turbo": "2.11.10",
+    "typescript": "7.0.2"
+  },
+  "packageManager": "pnpm@12.12.0"
 }

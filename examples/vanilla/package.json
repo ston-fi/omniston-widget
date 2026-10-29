@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
-    "preview": "vite preview"
+    "lint": "oxlint .",
+    "format": "oxfmt .",
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
     "vite": "catalog:"

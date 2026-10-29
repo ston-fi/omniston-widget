@@ -1,0 +1,24 @@
+{
+  "$schema": "https://turborepo.dev/schema.json",
+  "agentGuidance": false,
+  "ui": "tui",
+  "globalDependencies": [
+    ".oxlintrc.json",
+    ".oxfmtrc.json",
+    "tsconfig.base.json"
+  ],
+  "tasks": {
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "build": {
+      "outputs": ["dist/**"]
+    },
+    "lint": {},
+    "format": {
+      "cache": false
+    },
+    "typecheck": {}
+  }
+}

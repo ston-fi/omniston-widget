@@ -26,10 +26,10 @@ function App() {
           instance: tonconnect,
         },
         widget: {
-          defaultBidAsset: "EQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAM9c",  // TON
-          defaultAskAsset: "EQCxE6mUtQJKFnGfaROTKOt1lZbDiiX1kCixRv7Nw2Id_sDs",  // USD₮
+          defaultBidAsset: "EQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAM9c", // TON
+          defaultAskAsset: "EQCxE6mUtQJKFnGfaROTKOt1lZbDiiX1kCixRv7Nw2Id_sDs", // USD₮
           customAssets: [
-            "EQA2kCVNwVsil2EM2mB0SkXytxCqQjS4mttjDpnXmwG9T6bO",                 // STON
+            "EQA2kCVNwVsil2EM2mB0SkXytxCqQjS4mttjDpnXmwG9T6bO", // STON
           ],
         },
       });
@@ -42,7 +42,7 @@ function App() {
       widgetRef.current?.unmount();
       widgetRef.current = null;
     };
-  }, []);
+  }, [tonconnect]);
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-start gap-8 p-8">
