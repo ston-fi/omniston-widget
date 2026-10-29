@@ -6,11 +6,28 @@
   </picture>
 </div>
 
+# STON.fi Widget
+
+The STON.fi Widget adds a swap interface for the TON blockchain to your application or website with minimal configuration. Powered by [Omniston](https://docs.ston.fi/developer-section/omniston), it handles wallet connection, quotes, and swap execution. You can collect integrator fees, choose available assets and the initial trading pair, and customize the appearance to match your product.
+
 ## Documentation
 
 For complete documentation, including detailed configuration options, API reference, and integration guides, please visit **[https://docs.ston.fi/developer-section/widget](https://docs.ston.fi/developer-section/widget)**
 
-### Distribution Model
+## Visual constructor
+
+Use the [visual constructor](https://widget.ston.fi/constructor) as a playground to try the widget or as a configuration UI for your integration. Preview your changes as you configure the widget.
+
+![STON.fi Widget visual constructor](assets/widget_constructor_dark.png)
+
+The constructor provides:
+
+- **Theme customization**: configure light and dark themes, colors, spacing, borders, and widths.
+- **Asset selection**: use the default assets, add custom assets, or define your own list and initial trading pair.
+- **Integrator fees**: set the fee recipient and rate.
+- **Code export**: copy the generated CSS and JavaScript configuration or a complete HTML example into your project.
+
+## Distribution Model
 
 **This widget code is not distributed as an npm package.** This is an intentional design decision to prevent integrators from installing a fixed version that becomes outdated over time.
 
@@ -21,12 +38,12 @@ For complete documentation, including detailed configuration options, API refere
 Load the widget directly via a script tag. The IIFE bundle exposes `OmnistonWidget` as a global variable on `window`.
 
 ```html
-  <script src="https://widget.ston.fi/v0/index.js"></script>
-  <script type="module">
-    const widget = new window.OmnistonWidget(/** **/);
+<script src="https://widget.ston.fi/v0/index.js"></script>
+<script type="module">
+  const widget = new window.OmnistonWidget(/** **/);
 
-    widget.mount(document.querySelector("#omniston-widget-container"));
-  </script>
+  widget.mount(document.querySelector("#omniston-widget-container"));
+</script>
 ```
 
 **OR**
